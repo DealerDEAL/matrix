@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+ int siz;
+ cout<<"size of massive";
+ cin>>siz;
+ int *siz_m;
+ siz_m=(int*)malloc(siz * sizeof(int));
+ int arr[siz_m];
+ for(int i=0;i<siz;i++){
+     arr[i]=i+1;
+ }
+ for(int i=0;i<siz;i++){
+    int paper=arr[i+1];
+    arr[i+1]=arr[i+2];
+    arr[i+2]=paper;
+    paper=0;
+ }
+ do
+ int coun=0;
+ {
+     cout<<arr[coun];
+     coun++;
+ }while(coun<siz_m);
+ return 0;
+ }
